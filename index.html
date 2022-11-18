@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Library App</title>
+</head>
+<body>
+    <header>
+        <h1>My Library</h1>
+        <button data-modal-target="#modal" class="btn">Add book</button> 
+    </header>
+    <main>
+        <div class="modal" id="modal">
+        <button class="modal-close">&times;</button>
+        <form name="BookForm" id="book-form" class="modal-body">
+            <label for="title">Book title</label>
+            <input type="text" id="title" name="title" class="input" required>
+
+            <label for="author">Book author</label>
+            <input type="text" id="author" name="author" class="input" required>
+
+            <label for="pages">Book pages</label>
+            <input type="number" id="pages" name="pages" class="input">
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="read" name="read" />
+                <label for="read">Readed</label>
+            </div>
+            
+            <button type="submit" id="submit" class="btn">Add book</button>
+        </form>
+        </div>
+        <div id="overlay"></div>
+        <div class="library"></div>
+    </main>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
